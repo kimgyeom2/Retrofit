@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btn1.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
-                var service=ApiClient.apiService
+                var service=ApiClient.retrofit
                 try {
                     val response = service.getPersons()
                     Log.i("zzz",response.toString())
